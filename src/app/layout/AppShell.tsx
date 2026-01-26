@@ -5,7 +5,6 @@ export const AppShell = () => (
   <>
     <Header />
     <main className="min-h-screen">
-      kek
       <Outlet />
     </main>
   </>

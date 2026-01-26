@@ -4,8 +4,8 @@ export const Product = () => {
   const { id } = useParams();
 
   return (
-    <body>
+    <div>
       <h1>Product {id}</h1>
-    </body>
+    </div>
   );
 };
