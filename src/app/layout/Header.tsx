@@ -6,30 +6,30 @@ import { MobileMenu } from "./MobileMenu";
 const womenSections = [
   {
     name: "Tops",
-    to: "/products",
+    to: "/products?section=tops&gender=female",
   },
   {
     name: "Bottoms",
-    to: "/products",
+    to: "/products?section=bottoms&gender=female",
   },
   {
     name: "Shoes",
-    to: "/products",
+    to: "/products?section=shoes&gender=female",
   },
 ];
 
 const menSections = [
   {
     name: "Tops",
-    to: "/products",
+    to: "/products?section=tops&gender=male",
   },
   {
     name: "Bottoms",
-    to: "/products",
+    to: "/products?section=bottoms&gender=male",
   },
   {
     name: "Shoes",
-    to: "/products",
+    to: "/products?section=shoes&gender=male",
   },
 ];
 
