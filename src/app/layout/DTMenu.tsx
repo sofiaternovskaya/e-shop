@@ -29,7 +29,7 @@ export const DTMenu = ({ sections }: TProps) => {
               className="min-w-48 p-4 divide-y divide-white/5 rounded-xl bg-white/5 text-sm/6 transition duration-200 ease-in-out [--anchor-gap:--spacing(5)] data-closed:-translate-y-1 data-closed:opacity-0 shadow-md"
             >
               {section.items.map((item) => (
-                <div className="p-2">
+                <div key={item.name} className="p-2">
                   <Link to={item.to}>{item.name}</Link>
                 </div>
               ))}
