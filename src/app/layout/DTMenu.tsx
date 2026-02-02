@@ -38,7 +38,7 @@ export const DTMenu = ({ sections }: TProps) => {
         </div>
       ))}
       <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-        <Link to="/" className="text-sm/6 font-semibold text-gray-900">
+        <Link to="/cart" className="text-sm/6 font-semibold text-gray-900">
           Cart
         </Link>
       </div>

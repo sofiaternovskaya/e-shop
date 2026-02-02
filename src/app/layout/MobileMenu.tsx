@@ -73,7 +73,7 @@ export const MobileMenu = ({ isOpen, setIsOpen, sections }: TProps) => {
 
             <div className="py-2">
               <Link
-                to="/"
+                to="/cart"
                 className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
               >
                 Cart
