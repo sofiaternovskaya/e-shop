@@ -1,11 +1,12 @@
 import { useParams } from "react-router-dom";
+import { useProduct } from "../features/products/api/useProduct";
 
 export const Product = () => {
-  const { id } = useParams();
+  const { productId } = useParams<{ productId: string }>();
+  const { data, isLoading } = useProduct(productId);
 
-  return (
-    <div>
-      <h1>Product {id}</h1>
-    </div>
-  );
+  if (isLoading) return <div>Loading…</div>;
+  if (!data) return <div>Product not found</div>;
+
+  return <div>{data.title}</div>;
 };
