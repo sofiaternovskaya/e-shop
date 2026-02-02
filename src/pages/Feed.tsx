@@ -4,7 +4,7 @@ import { parsePagination } from "../features/pagination/routing/parsePagination"
 import { Pagination } from "../components/Pagination";
 import { parseProductsQuery } from "../features/products/model/parseProductsQuery";
 import { useProducts } from "../features/products/api/useProducts";
-import { ProductCard } from "../components/ProductCard/ProductCard";
+import { ProductCard } from "../components/ProductCard";
 
 export const Feed = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -21,9 +21,12 @@ export const Feed = () => {
 
   return (
     <div>
-      {data?.items.map((product) => (
-        <ProductCard key={product.id} product={product} />
-      ))}
+      <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+        {data?.items.map((product) => (
+          <ProductCard key={product.id} product={product} />
+        ))}
+      </div>
+
       <Pagination
         page={page}
         total={Math.ceil(data?.total / limit)}
