@@ -20,20 +20,24 @@ export const Feed = () => {
   }
 
   return (
-    <div>
-      <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
-        {data?.items.map((product) => (
-          <ProductCard key={product.id} product={product} />
-        ))}
+    <div className="pb-10">
+      <div className="mb-6 px-8">
+        <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+          {data?.items.map((product) => (
+            <ProductCard key={product.id} product={product} />
+          ))}
+        </div>
       </div>
 
-      <Pagination
-        page={page}
-        total={Math.ceil(data?.total / limit)}
-        onPageChange={(curPage) =>
-          setPage(searchParams, setSearchParams, curPage)
-        }
-      />
+      <div className="px-8 flex justify-center md:justify-start sm:width-full">
+        <Pagination
+          page={page}
+          total={Math.ceil(data?.total / limit)}
+          onPageChange={(curPage) =>
+            setPage(searchParams, setSearchParams, curPage)
+          }
+        />
+      </div>
     </div>
   );
 };
