@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import { useCart } from "../features/cart/hooks/useCart";
 
 export const Cart = () => {
@@ -14,6 +15,7 @@ export const Cart = () => {
           {item.title} {item.productId}: {item.quantity}
         </div>
       ))}
+      <Link to="/checkout">Proceed to checkout</Link>
     </div>
   );
 };
